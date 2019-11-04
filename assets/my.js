@@ -19,9 +19,10 @@ fetch('https://api.kanye.rest/')
 	var quoteResult = jsonResults.quote;
 	console.log(quoteResult)
 	document.getElementById("quote").innerHTML = ("&ldquo;" + quoteResult + "&rdquo;");
+	String(quoteResult);
 
 
-
+////////////////// Length to change color
 	var length = quoteResult.length;
 	console.log(length)
 	if (length >= 100) {
@@ -35,18 +36,55 @@ fetch('https://api.kanye.rest/')
 		waves[1].fillStyle = "#fbb098";
 		waves[2].fillStyle = "#d87e7c";
 
+		
+		sun.style.background = "#1d0056";
+		sun_ray.style.background = "#30117c";
+		quote.style.textTransform = "uppercase";
+		quote.style.color = "#ffff00";
+		quote.style.textShadow = "none";
 
+	} else if (length >= 40) {
+		canvas.style.background = "#ffc5e6";
+		document.getElementById("mountain").src = "images/mountain03.svg";
+
+
+		// console.log(waves)
+		// console.log(waves[0].fillStyle)
+		waves[0].fillStyle = "#6effbf";
+		waves[1].fillStyle = "#71ffd3";
+		waves[2].fillStyle = "#88ff73";
+
+		
+		sun.style.background = "#fcf2db";
+		sun_ray.style.background = "#fcf5e8";
+		quote.style.color = "#0000fe";
+		quote.style.textShadow = "none";
 
 	}
 
+///////////////
+
+
+
+if (quoteResult.indexOf("c") >= 0) {
+    console.log("cursive")
+    quote.style.fontFamily = "'Allura', cursive";
+    quote.style.textTransform = "none";
+    quote.style.fontWeight = "600";
+
+} else if (quoteResult.indexOf("k") >= 0) {
+    console.log("serif")
+    quote.style.fontFamily = "'Playfair Display', serif";
+
+}
+
+
+TweenMax.to(quote, 1.5, {ease: Sine.easeInOut, y:20, repeat:-1, yoyo:true})
 
 })
 .catch(function(error){
 	console.log("error message:", error)
 })
 
-
-var dataURL = canvas.toDataURL();
-console.log(dataURL)
 
 
