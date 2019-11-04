@@ -71,3 +71,13 @@ p::first-letter{
 	left: 50%;
 	transform: translate(-50%, 0%);
 }
+
+#by{
+	position: absolute;
+	top: 2.5%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	color: lightpink;
+	font-size: 90%;
+	display: none;
+}

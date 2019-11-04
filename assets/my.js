@@ -87,4 +87,17 @@ TweenMax.to(quote, 1.5, {ease: Sine.easeInOut, y:20, repeat:-1, yoyo:true})
 })
 
 
+/////////////
+
+var title = document.querySelector("#title")
+var by = document.querySelector("#by")
+
+
+title.addEventListener("mouseover", function(){
+	by.style.display = "block"
+})
+
+title.addEventListener("mouseout", function(){
+	by.style.display = "none"
+})
 
