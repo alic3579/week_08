@@ -25,7 +25,7 @@ fetch('https://api.kanye.rest/')
 ////////////////// Length to change color
 	var length = quoteResult.length;
 	console.log(length)
-	if (length >= 100) {
+	if (length >= 90) {
 		canvas.style.background = "#21083f";
 		document.getElementById("mountain").src = "images/mountain02.svg";
 

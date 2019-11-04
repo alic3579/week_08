@@ -11,6 +11,7 @@
 
 body{
 	overflow: hidden;
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 #sun{
@@ -58,3 +59,15 @@ body{
 	justify-content: center;
 }
 
+
+p::first-letter{
+	color: lightpink;
+}
+
+#title{
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
