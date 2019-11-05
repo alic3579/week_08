@@ -17,7 +17,7 @@ fetch('https://api.kanye.rest/')
 
 	// console.log("results: ", jsonResults)
 	var quoteResult = jsonResults.quote;
-	console.log(quoteResult)
+	// console.log(quoteResult)
 	document.getElementById("quote").innerHTML = ("&ldquo;" + quoteResult + "&rdquo;");
 	String(quoteResult);
 
@@ -101,3 +101,33 @@ title.addEventListener("mouseout", function(){
 	by.style.display = "none"
 })
 
+/////////////////
+
+
+var dateApi;
+// http://worldclockapi.com/api/json/est/now
+fetch(`http://worldtimeapi.org/api/ip`)
+.then(function(results){
+	return results.json()
+})
+.then(function(jsonResults){
+
+	// console.log("date: ", jsonResults)
+	var date = jsonResults.datetime;
+	// console.log(date)
+	String(date);
+	var dateLength = date.length;
+	var justDate = "";
+	String(justDate);
+
+	if (dateLength > 10) {
+		justDate = date.substring(0, 10);
+	}
+	// console.log(justDate)
+	document.getElementById("date").innerHTML = (justDate);
+
+
+})
+.catch(function(error){
+	console.log("error message:", error)
+})
