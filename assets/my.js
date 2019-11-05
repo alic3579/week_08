@@ -106,7 +106,7 @@ title.addEventListener("mouseout", function(){
 
 var dateApi;
 // http://worldclockapi.com/api/json/est/now
-fetch(`http://worldtimeapi.org/api/ip`)
+fetch(`https://worldtimeapi.org/api/ip`)
 .then(function(results){
 	return results.json()
 })

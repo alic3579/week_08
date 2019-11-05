@@ -1,4 +1,5 @@
-//source: https://greensock.com/forums/topic/16172-svg-wave-animation/
+//forum of wave animation: https://greensock.com/forums/topic/16172-svg-wave-animation/
+//source of code from forum above: https://codepen.io/osublake/pen/OpoJgw
 
 
 var canvas = document.getElementById("canvas");
