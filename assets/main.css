@@ -67,7 +67,7 @@ p::first-letter{
 #title{
 
 	position: absolute;
-	top: 2.5%;
+	top: 0;
 	left: 50%;
 	transform: translate(-50%, 0%);
 }
